@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vitality Lab - Suplementos Naturales</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Newsreader:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "primary": "#435844",
+                    "outline": "#737871",
+                    "surface": "#fbf9f4",
+                    "surface-bright": "#fbf9f4",
+                    "on-tertiary-fixed-variant": "#623f18",
+                    "on-surface-variant": "#434842",
+                    "surface-tint": "#4f644f",
+                    "surface-container-highest": "#e4e2dd",
+                    "inverse-primary": "#b6cdb4",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#566342",
+                    "tertiary-fixed-dim": "#f0bd8b",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#5a6745",
+                    "on-secondary-fixed": "#141f05",
+                    "inverse-surface": "#30312e",
+                    "on-primary-container": "#dbf3d8",
+                    "secondary-fixed-dim": "#becca3",
+                    "tertiary-container": "#8b6238",
+                    "on-primary-fixed-variant": "#384c39",
+                    "surface-container-low": "#f5f3ee",
+                    "surface-dim": "#dbdad5",
+                    "on-secondary-fixed-variant": "#3f4b2c",
+                    "secondary-container": "#d7e5bb",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#ffe8d5",
+                    "tertiary": "#704a22",
+                    "surface-variant": "#e4e2dd",
+                    "on-surface": "#1b1c19",
+                    "background": "#fbf9f4",
+                    "on-tertiary-fixed": "#2c1600",
+                    "surface-container": "#f0eee9",
+                    "secondary-fixed": "#dae8be",
+                    "on-background": "#1b1c19",
+                    "on-primary-fixed": "#0d1f10",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f2f1ec",
+                    "primary-fixed": "#d1e9cf",
+                    "primary-container": "#5b705b",
+                    "tertiary-fixed": "#ffdcbd",
+                    "surface-container-high": "#eae8e3",
+                    "outline-variant": "#c3c8c0",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#b6cdb4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "stack-lg": "32px",
+                    "section-gap": "80px",
+                    "margin-mobile": "20px",
+                    "base": "8px",
+                    "margin-desktop": "64px",
+                    "stack-md": "16px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "caption": ["Manrope"],
+                    "label-sm": ["Manrope"],
+                    "display-lg": ["Newsreader"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg-mobile": ["Newsreader"],
+                    "body-md": ["Manrope"],
+                    "headline-lg": ["Newsreader"],
+                    "headline-md": ["Newsreader"]
+            },
+            "fontSize": {
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "label-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #fbf9f4; color: #1b1c19; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- 1. TopNavBar (from JSON) -->
+<nav class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md sticky top-0 full-width shadow-sm shadow-primary/5 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-display-lg text-headline-md text-primary dark:text-primary-fixed tracking-tight" href="#">
+                Vitality Lab
+            </a>
+<!-- Navigation Links (Desktop) -->
+<ul class="hidden md:flex items-center gap-stack-lg">
+<li>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1 block hover:text-primary-container dark:hover:text-primary-fixed-dim transition-all" href="#">Home</a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-primary transition-colors duration-300 block hover:text-primary-container dark:hover:text-primary-fixed-dim transition-all" href="#">Products</a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-primary transition-colors duration-300 block hover:text-primary-container dark:hover:text-primary-fixed-dim transition-all" href="#">Categories</a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-primary transition-colors duration-300 block hover:text-primary-container dark:hover:text-primary-fixed-dim transition-all" href="#">Testimonials</a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-primary transition-colors duration-300 block hover:text-primary-container dark:hover:text-primary-fixed-dim transition-all" href="#">About Us</a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-primary transition-colors duration-300 block hover:text-primary-container dark:hover:text-primary-fixed-dim transition-all" href="#">Contact</a>
+</li>
+</ul>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-stack-sm text-primary dark:text-primary-fixed">
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- 2. Hero Section & 3. Floating Reviews -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="flex flex-col gap-stack-lg z-10">
+<h1 class="font-display-lg text-display-lg text-primary leading-tight">
+                    Complementa tu bienestar de forma natural
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Suplementos vitamínicos pensados para apoyar tu descanso, energía, salud muscular y estilo de vida diario.
+                </p>
+<div class="flex flex-wrap gap-stack-md pt-4">
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm shadow-primary/20">
+                        Ver productos
+                    </button>
+<button class="border border-outline text-primary px-6 py-3 rounded-full font-label-sm text-label-sm hover:bg-surface-container transition-colors">
+                        Explorar categorías
+                    </button>
+</div>
+</div>
+<div class="relative w-full aspect-square md:aspect-[4/5] rounded-xl overflow-hidden bg-surface-container shadow-lg shadow-primary/5">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A beautifully styled photograph of a minimalist amber glass supplement bottle resting on a raw stone slab. Soft, diffused natural morning light streams in, highlighting the subtle sage green label and casting gentle, long shadows. The background is a clean, bright, light-mode cream color with a soft-focus monstera leaf providing a hint of organic green depth. The overall aesthetic is calm, premium, and apothecary-inspired." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7E6MLHaa_HuiyJpCyTZQ5RKMopcUawKqpsqxOWLlVYlL7DgRokquHzP0saFm0xFmyU83zuHseJIakQNMts1SmhndQTfNhkm6bIQJ9TWS1i5hO4UZodno0J_Jks5DxZZdedf5tGiXs6mtWM3mo24bgeY9AnZJl3ouhiYpdQ2bEQNZRyb3rMeGipVlkZ1Z4y4xywW6-j56CPTFd7OZ6DdNkijbM523XbCZ6BLg9XgSaD2KfRwhblWH_7hTTyYT1uhyRLPpr7g0hF1El');"></div>
+<!-- Floating Review -->
+<div class="absolute bottom-8 left-8 right-8 md:right-auto md:left-[-40px] md:w-80 bg-surface/90 backdrop-blur-md p-6 rounded-xl shadow-xl shadow-primary/10 border border-surface-container-highest">
+<div class="flex items-center gap-2 mb-2 text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+                        "Me ayudó a descansar mejor sin sentir pesadez al día siguiente. Muy recomendado."
+                    </p>
+<p class="font-caption text-caption text-on-surface-variant mt-2 mt-4 font-semibold uppercase tracking-wider">
+                        — Laura G.
+                    </p>
+</div>
+</div>
+</section>
+<!-- 4. Categorías -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg text-center">Explora por Categoría</h2>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-stack-md">
+<a class="flex flex-col items-center gap-stack-sm p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors group" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">bedtime</span>
+</div>
+<span class="font-label-sm text-label-sm text-center text-on-surface">Descanso y sueño</span>
+</a>
+<a class="flex flex-col items-center gap-stack-sm p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors group" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">spa</span>
+</div>
+<span class="font-label-sm text-label-sm text-center text-on-surface">Estrés y relajación</span>
+</a>
+<a class="flex flex-col items-center gap-stack-sm p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors group" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">fitness_center</span>
+</div>
+<span class="font-label-sm text-label-sm text-center text-on-surface">Salud muscular</span>
+</a>
+<a class="flex flex-col items-center gap-stack-sm p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors group" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">bolt</span>
+</div>
+<span class="font-label-sm text-label-sm text-center text-on-surface">Energía diaria</span>
+</a>
+<a class="flex flex-col items-center gap-stack-sm p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors group md:col-span-1 col-span-2" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">shield</span>
+</div>
+<span class="font-label-sm text-label-sm text-center text-on-surface">Defensas</span>
+</a>
+</div>
+</section>
+<!-- 5. Productos Destacados -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="flex justify-between items-end mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary">Nuestros Favoritos</h2>
+<a class="font-label-sm text-label-sm text-primary hover:underline hidden md:block" href="#">Ver todos los productos</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm shadow-primary/5 hover:shadow-md hover:shadow-primary/10 transition-shadow">
+<div class="aspect-[4/5] bg-surface-container-low relative">
+<div class="absolute inset-0 bg-cover bg-center mix-blend-multiply opacity-80" data-alt="A clean, minimalist studio shot of a brown glass bottle of Melatonin supplements standing on a soft beige surface. The lighting is soft and airy, casting gentle shadows that emphasize the quiet vitality brand aesthetic. The background is pure, serene off-white." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABipekFUXEcMdrJ0DguZVEslpb_mGB0yLGZiQ2VQcIhEeSRblnzd4Z1Ml8YgWNuYGk96qNAZqy9gOx0LL0aOE7meCVIOIKZ6wKnqtsYnzbDVReMgD5enR3KtQttO8EGSrl7m5gwUJsnb4CofIakoANfEJlqagFNgbFWd9Y1p6WUlkhyxhW17RtJOvxyhBqw8DDp-1FAFxQZ_5fQvycFvqfkJ-xNpsQUBVSmDNde_kPcoEfNv7xiW3HZGYtjVmuFkLhFJW1zWMz6nq3');"></div>
+</div>
+<div class="p-6 flex flex-col gap-stack-sm flex-grow">
+<span class="font-caption text-caption text-secondary">Descanso y sueño</span>
+<h3 class="font-headline-md text-body-lg font-semibold text-on-surface">Melatonina Pura</h3>
+<p class="font-body-md text-caption text-on-surface-variant flex-grow">Regula tu ciclo de sueño de forma natural.</p>
+<div class="flex items-center justify-between mt-4">
+<span class="font-label-sm text-body-md font-bold text-primary">$24.00</span>
+<button class="text-primary hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm shadow-primary/5 hover:shadow-md hover:shadow-primary/10 transition-shadow">
+<div class="aspect-[4/5] bg-surface-container-low relative">
+<div class="absolute inset-0 bg-cover bg-center mix-blend-multiply opacity-80" data-alt="A high-quality lifestyle image of a glass dropper bottle containing Ashwagandha extract. The bottle rests on a natural wood surface surrounded by dried herbs and soft white linens. The lighting is warm and organic, communicating a natural, stress-relieving property in alignment with the minimalist apothecary style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVOBIb9-9XTssDu78w5glAWONOHQ792KaqXJDigkTpQ5eiq-PFFSUMIVPD2l8H5M4WK8HbzunmrPD6yncfZBK4Ksge5XXS0CjBwCKdegJSoX4H_qYZavaddIvi2wcL_ELD74wkDynwCZ1L-EAms4xuWBtYfFsZPegOyPB9TTvc3tQmZJM7yrWGILpivMx85vK7mwSXSTiFHwne7oX6SmTBtG22oU8Dwf4eXEXMkwMCAatNy-g7kf-Q1Ks-iIoQf9Y5yyA9XYyGvjNw');"></div>
+</div>
+<div class="p-6 flex flex-col gap-stack-sm flex-grow">
+<span class="font-caption text-caption text-secondary">Estrés y relajación</span>
+<h3 class="font-headline-md text-body-lg font-semibold text-on-surface">Ashwagandha</h3>
+<p class="font-body-md text-caption text-on-surface-variant flex-grow">Adaptógeno para gestionar el estrés diario.</p>
+<div class="flex items-center justify-between mt-4">
+<span class="font-label-sm text-body-md font-bold text-primary">$28.50</span>
+<button class="text-primary hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm shadow-primary/5 hover:shadow-md hover:shadow-primary/10 transition-shadow">
+<div class="aspect-[4/5] bg-surface-container-low relative">
+<div class="absolute inset-0 bg-cover bg-center mix-blend-multiply opacity-80" data-alt="A bright, clean photo of a magnesium supplement jar placed on a textured cream ceramic tile. The setting is minimalist, with a single shadow stretching softly across the frame. The colors are predominantly white, beige, and the muted sage of the label, perfectly fitting the quiet vitality identity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyLGie8C7Qm2Yt9qs51qg-IinoORq4ZFqd7rrc_5KLPIHg2y2FoojGK_Em2lCJ4B5wdsP_7gwp_8h2e-84N4pBLQRMC3p7EGTkwqi664PhUJ73m2YGr1KWIXH40du9djGUVe3BI5ZSkFcJ1YYI-PQRtSbFOSKny8TScDd3gGSqCHcn0fEFXwunLEGUXcDyD5fyia_18qsO4YsfR1Z1pF_ag-9Gg1dj8odnT1jI_-1-DVE08Q9RBkQ2kqiDHAYWbLjyK4MUfjZOITSS');"></div>
+</div>
+<div class="p-6 flex flex-col gap-stack-sm flex-grow">
+<span class="font-caption text-caption text-secondary">Salud muscular</span>
+<h3 class="font-headline-md text-body-lg font-semibold text-on-surface">Magnesio Citrato</h3>
+<p class="font-body-md text-caption text-on-surface-variant flex-grow">Recuperación muscular y función nerviosa.</p>
+<div class="flex items-center justify-between mt-4">
+<span class="font-label-sm text-body-md font-bold text-primary">$22.00</span>
+<button class="text-primary hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm shadow-primary/5 hover:shadow-md hover:shadow-primary/10 transition-shadow">
+<div class="aspect-[4/5] bg-surface-container-low relative">
+<div class="absolute inset-0 bg-cover bg-center mix-blend-multiply opacity-80" data-alt="A macro shot of a small, elegant bottle of oregano oil next to a fresh oregano sprig. The lighting is diffused and natural, highlighting the golden color of the oil. The background is a soft beige tone, emphasizing the organic and pure nature of the natural supplement." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9OZn1Mx3hF6cWJEj68ZmL-JyFlewZbP0TrONI6wxrNbl3QRht6dGnM526YQRiw5QPw2DHHwUPqoc9Irck-7IDdDX2O43DUVl1sMQGRoQaU9wtG3rfb3baCK19FJIlGLNbaK5c_j_wmlmZKoxAjyMzpZP0fNMR9W80tZjwQMsGL_VSL4Mvz9oj1MXvC37I-kG6_-ZOY7OobkoQLuRocBH3z0S6EfO-XWI4l9vwZtZ-z-fJitevzrDktxlxpCMqAZvTxVVwnx7ERjgj');"></div>
+</div>
+<div class="p-6 flex flex-col gap-stack-sm flex-grow">
+<span class="font-caption text-caption text-secondary">Defensas</span>
+<h3 class="font-headline-md text-body-lg font-semibold text-on-surface">Aceite de Orégano</h3>
+<p class="font-body-md text-caption text-on-surface-variant flex-grow">Apoyo inmunológico concentrado y potente.</p>
+<div class="flex items-center justify-between mt-4">
+<span class="font-label-sm text-body-md font-bold text-primary">$18.90</span>
+<button class="text-primary hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center md:hidden">
+<a class="font-label-sm text-label-sm text-primary border border-primary rounded-full px-6 py-2 inline-block" href="#">Ver todos</a>
+</div>
+</section>
+<!-- 6. Sección de Confianza -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-stack-lg text-center">
+<div class="flex flex-col items-center gap-stack-sm">
+<span class="material-symbols-outlined text-secondary" style="font-size: 40px; font-variation-settings: 'wght' 200;">eco</span>
+<h4 class="font-label-sm text-label-sm text-on-surface">Ingredientes Naturales</h4>
+<p class="font-caption text-caption text-on-surface-variant">Fórmulas limpias y sin aditivos innecesarios.</p>
+</div>
+<div class="flex flex-col items-center gap-stack-sm">
+<span class="material-symbols-outlined text-secondary" style="font-size: 40px; font-variation-settings: 'wght' 200;">local_shipping</span>
+<h4 class="font-label-sm text-label-sm text-on-surface">Envíos Rápidos</h4>
+<p class="font-caption text-caption text-on-surface-variant">Recibe tu bienestar en la puerta de tu casa.</p>
+</div>
+<div class="flex flex-col items-center gap-stack-sm">
+<span class="material-symbols-outlined text-secondary" style="font-size: 40px; font-variation-settings: 'wght' 200;">thumb_up</span>
+<h4 class="font-label-sm text-label-sm text-on-surface">Alta Calidad</h4>
+<p class="font-caption text-caption text-on-surface-variant">Productos testeados para garantizar resultados.</p>
+</div>
+<div class="flex flex-col items-center gap-stack-sm">
+<span class="material-symbols-outlined text-secondary" style="font-size: 40px; font-variation-settings: 'wght' 200;">lock</span>
+<h4 class="font-label-sm text-label-sm text-on-surface">Compra Segura</h4>
+<p class="font-caption text-caption text-on-surface-variant">Tus datos protegidos en cada transacción.</p>
+</div>
+</div>
+</section>
+<!-- 7. Quiénes Somos -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:flex-row items-center gap-gutter">
+<div class="w-full md:w-1/2 aspect-[4/3] rounded-xl overflow-hidden bg-surface-variant">
+<div class="w-full h-full bg-cover bg-center" data-alt="A soothing, minimalist photograph of an open field at golden hour. The sunlight is soft and warm, catching the tops of tall, natural grasses. The color palette is earthy and calm, dominated by muted greens, warm beiges, and soft sunlight, perfectly capturing the mission of natural, holistic wellness and quiet vitality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhWrovoM_dBKb1lCw8KBE2nwL3aTH-2UYxZZXma1421Ia2yybQq8ZN5vhAZies0Ltt8KO-7QdBbPtHczbPtA4Jvb01cft_ZshESEE7u1nMi-zXHWguAg--ElfpwOJIeS73sf197Cfhn_vOS9mB2RnuQBTrlv9axz4_6D6qqpX4gpEG38UyGVOWKQpTo2gHTUeDYS01mubbeBTVOY6UmcqYkcP1B5F9RcMrx_R7PzeByNQSuVkHepdInrkyvbBrURG2hDlfSk1Kp__t');"></div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-stack-lg">
+<h2 class="font-display-lg text-headline-lg text-primary">Nuestra Misión</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    En Vitality Lab, creemos que el bienestar comienza con decisiones conscientes. Nacimos con la vocación de ofrecer suplementos de la más alta calidad, formulados para integrarse de manera armónica en tu vida diaria. Promovemos el autocuidado responsable, conectando lo mejor de la naturaleza con la ciencia para ayudarte a alcanzar tu balance ideal de forma transparente y efectiva.
+                </p>
+<div>
+<button class="text-primary font-label-sm border-b border-primary pb-1 hover:text-primary-container hover:border-primary-container transition-colors">Conoce más sobre nosotros</button>
+</div>
+</div>
+</section>
+<!-- Health Disclaimer Banner (Before Footer) -->
+<div class="bg-surface-variant/50 border-t border-surface-container-highest py-4 px-margin-mobile md:px-margin-desktop text-center">
+<p class="font-caption text-caption text-outline">
+                Advertencia legal: Este producto no reemplaza una alimentación equilibrada ni la recomendación de un profesional de salud.
+            </p>
+</div>
+</main>
+<!-- 9. Footer (from JSON) -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest full-width">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg px-margin-desktop py-section-gap max-w-container-max mx-auto text-center md:text-left">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-stack-sm items-center md:items-start">
+<span class="font-display-lg text-headline-sm text-primary dark:text-primary-fixed">
+                    Vitality Lab
+                </span>
+<p class="font-caption text-caption text-secondary dark:text-secondary-fixed mt-4 max-w-xs">
+                    © 2024 Vitality Lab. Natural supplements for a balanced life. Health Disclaimer: These statements have not been evaluated by the Food and Drug Administration.
+                </p>
+</div>
+<!-- Links -->
+<div class="flex flex-col gap-stack-sm items-center md:items-start">
+<h3 class="font-label-sm text-label-sm text-primary font-bold mb-2">Conecta</h3>
+<ul class="flex flex-col gap-2">
+<li>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">WhatsApp</a>
+</li>
+<li>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Email</a>
+</li>
+<li>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Instagram</a>
+</li>
+<li>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-surface-variant hover:text-primary hover:underline transition-all" href="#">Facebook</a>
+</li>
+</ul>
+</div>
+<!-- Contact Quick Info (Added to balance grid and fulfill prompt partially in visual space) -->
+<div class="flex flex-col gap-stack-sm items-center md:items-start justify-center">
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 18px;">chat</span>
+                    Contáctanos
+                </button>
+</div>
+</div>
+</footer>
+</body></html>
